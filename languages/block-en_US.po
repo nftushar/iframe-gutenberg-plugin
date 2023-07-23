@@ -32,7 +32,7 @@ msgstr ""
 
 #: dist/editor.js:1
 #: dist/editor.js:56
-msgid "Add or Remove Cards"
+msgid "Manage Iframe"
 msgstr ""
 
 #: dist/editor.js:1

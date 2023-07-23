@@ -27,7 +27,7 @@ const Settings = ({ attributes, setAttributes }) => {
 							{tab.name === "general" && (
 								<PanelBody
 									className="bPlPanelBody"
-									title={__("Add or Remove Cards", "iframe")}
+									title={__("Manage Iframe", "iframe")}
 								>
 									<TextControl
 										label={__("Source", "iframe")}

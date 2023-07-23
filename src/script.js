@@ -1,8 +1,8 @@
 // Your main code
 import "./style.scss";
 import { minimizeIcon, maximizeIcon } from "./utils/icons";
- 
-import ReactDOM from 'react-dom';
+
+// import ReactDOM from 'react-dom';
 
 document.addEventListener("DOMContentLoaded", () => {
     const ifmEls = document.querySelectorAll(".wp-block-ifm-iframe");
@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (document.fullscreenElement) {
                 document.exitFullscreen();
-                ReactDOM.render(maximizeIcon, fullScreenBtn);
+                fullScreenBtn.innerHTML = maximizeIcon;
             } else {
                 ifmEl.requestFullscreen();
-                ReactDOM.render(minimizeIcon, fullScreenBtn);
+                fullScreenBtn.innerHTML = minimizeIcon;
             }
         };
         fullScreenBtn.addEventListener('click', onFullScreen);
