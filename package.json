@@ -14,7 +14,7 @@
     "i18n": "npm run i18n-pot && npm run i18n-json && npm run i18n-mo",
     "build": "gulp clean && npm run lint && webpack --mode=production && npm run i18n && gulp bundle"
   },
-  "author": "Wasek Bellah",
+  "author": "NF Tushar",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.3",

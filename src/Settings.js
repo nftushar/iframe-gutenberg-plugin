@@ -19,7 +19,7 @@ const Settings = ({ attributes, setAttributes }) => {
 					className="bPlTabPanel"
 					tabs={[
 						{ name: "general", title: __("General") },
-						{ name: "style", title: __("Style") },
+						// { name: "style", title: __("Style") },
 					]}
 				>
 					{(tab) => (

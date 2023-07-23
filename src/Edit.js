@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Settings from "./Settings";
-import Style from "./Style";
+// import Style from "./Style";
+
 import { maximizeIcon, minimizeIcon } from "./utils/icons";
 
 const Edit = (props) => {
@@ -30,7 +31,7 @@ const Edit = (props) => {
       <Settings attributes={attributes} setAttributes={setAttributes} />
 
       <div className={`${className}`} id={`ifm-${clientId}`}>
-        <Style attributes={attributes} clientId={clientId} />
+        {/* <Style attributes={attributes} clientId={clientId} /> */}
 
         <div className="ifmIframemain">
           <iframe
