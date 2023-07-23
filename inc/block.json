@@ -1,0 +1,47 @@
+{
+  "apiVersion": "1",
+  "name": "ifm/iframe",
+  "title": "iframe",
+  "description": "I Frame-7 Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive iframe embedding for videos, maps, and more.",
+  "category": "media",
+  "keywords": ["iframe-7", "iframe", "Gutenberg"],
+  "textdomain": "iframe-7",
+
+  "attributes": { 
+    "cId": {
+      "type": "string",
+      "default": ""
+    },
+    "src": {
+      "type": "string",
+      "default": "https://bplugins.com/"
+    },
+    "width": {
+      "type": "string",
+      "default": "100%"
+    },
+    "height": {
+      "type": "string",
+      "default": "415px"
+    },
+    "isFullScreen": {
+      "type": "boolean",
+      "default": true
+    } 
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "columns": {
+        "desktop": 1,
+        "tablet": 1,
+        "mobile": 1
+      }
+    }
+  },
+  "editorScript": "file:../dist/editor.js"
+}
