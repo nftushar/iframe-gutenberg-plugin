@@ -22,12 +22,12 @@
     },
     "height": {
       "type": "string",
-      "default": "415px"
+      "default": "673px"
     },
     "isFullScreen": {
       "type": "boolean",
       "default": true
-    } 
+    }
   },
   "supports": {
     "align": ["wide", "full"],

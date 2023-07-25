@@ -6,11 +6,12 @@ import {
 	PanelBody,
 	TabPanel,
 	TextControl,
+	ToggleControl,
 	__experimentalUnitControl as UnitControl,
 } from "@wordpress/components";
 
 const Settings = ({ attributes, setAttributes }) => {
-	const { src, height, width } = attributes;
+	const { src, height, width, isFullScreen } = attributes;
 
 	return (
 		<>
@@ -49,6 +50,12 @@ const Settings = ({ attributes, setAttributes }) => {
 										value={width}
 										onChange={(val) => setAttributes({ width: val })}
 									/>
+									<ToggleControl
+										label={__("Show Full Screen", "info-cards")}
+										checked={isFullScreen}
+										onChange={(val) => setAttributes({ isFullScreen: val })}
+									/>
+
 								</PanelBody>
 							)}
 							{/* Add other panels here for additional tabs */}

@@ -4,7 +4,9 @@ import Settings from "./Settings";
 import { maximizeIcon, minimizeIcon } from "./utils/icons";
 
 const Edit = (props) => {
-  const { className, attributes, setAttributes, clientId } = props;
+  // console.log(props);
+  const { className, attributes, setAttributes, clientId, isSelected
+  } = props;
   const { src, width, height, isFullScreen } = attributes;
 
   useEffect(() => {
@@ -30,7 +32,7 @@ const Edit = (props) => {
       <Settings attributes={attributes} setAttributes={setAttributes} />
 
       <div className={`${className}`} id={`ifm-${clientId}`}>
-
+        {!isSelected && <div className="mouse"></div>}
         <iframe
           className="ifmIframe"
           id="video-frame"
@@ -43,7 +45,6 @@ const Edit = (props) => {
         {(isFullScreen && !src.includes('youtube.com/embed')) && (
           <button onClick={onFullScreen} className="fullScreenBtn" dangerouslySetInnerHTML={{ __html: isNowFull ? minimizeIcon : maximizeIcon }} />
         )}
-
       </div>
     </>
   );
