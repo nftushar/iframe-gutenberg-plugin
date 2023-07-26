@@ -7,7 +7,7 @@
   "keywords": ["iframe-7", "iframe", "Gutenberg"],
   "textdomain": "iframe-7",
 
-  "attributes": { 
+  "attributes": {
     "cId": {
       "type": "string",
       "default": ""
@@ -16,6 +16,10 @@
       "type": "string",
       "default": "https://bplugins.com/"
     },
+    "title": {
+      "type": "string",
+      "default": "Iframe title"
+    },
     "width": {
       "type": "string",
       "default": "100%"
@@ -23,6 +27,16 @@
     "height": {
       "type": "string",
       "default": "673px"
+    },
+    "border": {
+      "type": "object",
+      "default": {
+        "radius": "5px"
+      }
+    },
+    "loading": {
+      "type": "string",
+      "default": "auto"
     },
     "isFullScreen": {
       "type": "boolean",
@@ -43,5 +57,6 @@
       }
     }
   },
-  "editorScript": "file:../dist/editor.js"
+  "editorScript": "file:../dist/editor.js",
+  "script": "file:dist/script.js"
 }

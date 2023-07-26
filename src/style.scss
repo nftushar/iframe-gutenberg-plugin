@@ -5,7 +5,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-.wp-block-ifm-iframe {
+.wp-block-ifm-iframe { 
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -17,7 +17,7 @@ html {
 	}
 	.ifmIframe {
 		position: relative;
-		background-color: #f0f0f0;
+		// background-color: #f0f0f0;
 		// padding: 15px;
 	}
 	&:fullscreen .ifmIframemain,

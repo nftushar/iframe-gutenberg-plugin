@@ -25,3 +25,5 @@ document.addEventListener("DOMContentLoaded", () => {
         ifmEl?.removeAttribute("data-attributes");
     });
 });
+
+ 
