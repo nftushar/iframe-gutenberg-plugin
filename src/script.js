@@ -2,7 +2,6 @@
 import "./style.scss";
 import { minimizeIcon, maximizeIcon } from "./utils/icons";
 
-// import ReactDOM from 'react-dom';
 
 document.addEventListener("DOMContentLoaded", () => {
     const ifmEls = document.querySelectorAll(".wp-block-ifm-iframe");

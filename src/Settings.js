@@ -1,14 +1,14 @@
 import { __ } from "@wordpress/i18n";
 import { InspectorControls } from "@wordpress/block-editor";
+import produce from "immer";
 import {
 	PanelBody, TabPanel, TextControl, ToggleControl, SelectControl, __experimentalUnitControl as UnitControl,
 } from "@wordpress/components";
-import { BorderControl } from "../../Components"
+import { BorderControl, MultiShadowControl } from "../../Components"
 
 
 const Settings = ({ attributes, setAttributes }) => {
-	const { src, title, height, width, loading, border, isFullScreen } = attributes;
-
+	const { src, title, height, width, loading, border, shadow, isFullScreen } = attributes;
 
 	return (
 		<>
@@ -70,13 +70,11 @@ const Settings = ({ attributes, setAttributes }) => {
 										onChange={val => setAttributes({ border: val })}
 										defaults={{ radius: '5px' }}
 									/>
-
-									{/* <UnitControl
+									<MultiShadowControl
 										className="mt20"
-										label={__("Border Radious", "iframe")}
-										labelPosition="left"
-										value={ifmRadius}
-										onChange={(val) => setAttributes({ ifmRadius: val })} /> */}
+										value={shadow}
+										onChange={(val) => setAttributes({ shadow: val })}
+										produce={produce} />
 									<ToggleControl
 										label={__("Show Full Screen", "iframe")}
 										checked={isFullScreen}

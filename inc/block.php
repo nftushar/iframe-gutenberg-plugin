@@ -39,7 +39,6 @@ class BDBBlockDirectory{
 				title="<?php echo htmlspecialchars($title); ?> "
 
 			></iframe>
-	
 
 			<?php echo $isFullScreen && !strpos($src, 'youtube.com/embed') ? "<button class='fullScreenBtn'>
 				<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='24'

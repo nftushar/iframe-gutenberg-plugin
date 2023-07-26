@@ -34,6 +34,18 @@
         "radius": "5px"
       }
     },
+    "shadow": {
+      "type": "array",
+      "default": [
+        {
+          "hOffset": "0px",
+          "vOffset": "4px",
+          "blur": "8px",
+          "spreed": "0px",
+          "color": "#0003"
+        }
+      ]
+    },
     "loading": {
       "type": "string",
       "default": "auto"
