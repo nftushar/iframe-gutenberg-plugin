@@ -17,7 +17,7 @@ const Settings = ({ attributes, setAttributes }) => {
 					className="bPlTabPanel"
 					tabs={[
 						{ name: "general", title: __("General") },
-						// { name: "style", title: __("Style") },
+						{ name: "style", title: __("Style") },
 					]}
 				>
 					{(tab) => (
@@ -74,7 +74,8 @@ const Settings = ({ attributes, setAttributes }) => {
 										className="mt20"
 										value={shadow}
 										onChange={(val) => setAttributes({ shadow: val })}
-										produce={produce} />
+										produce={produce}
+									/>
 									<ToggleControl
 										label={__("Show Full Screen", "iframe")}
 										checked={isFullScreen}
@@ -82,9 +83,29 @@ const Settings = ({ attributes, setAttributes }) => {
 									/>
 								</PanelBody>
 							)}
-							{/* Add other panels here for additional tabs */}
+
+							{tab.name === "style" && (
+								<PanelBody
+									className="bPlPanelBody"
+									title={__("Manage Iframe", "iframe")}
+								>
+									<BorderControl
+										label={__('Border:', 'iframe')}
+										value={border}
+										onChange={val => setAttributes({ border: val })}
+										defaults={{ radius: '5px' }}
+									/>
+									<MultiShadowControl
+										className="mt20"
+										value={shadow}
+										onChange={(val) => setAttributes({ shadow: val })}
+										produce={produce}
+									/>
+								</PanelBody>
+							)}
 						</>
 					)}
+
 				</TabPanel>
 			</InspectorControls>
 		</>
