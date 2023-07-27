@@ -62,20 +62,7 @@ const Settings = ({ attributes, setAttributes }) => {
 										labelPosition="left"
 										value={width}
 										onChange={(val) => setAttributes({ width: val })}
-									/>
-
-									<BorderControl
-										label={__('Border:', 'iframe')}
-										value={border}
-										onChange={val => setAttributes({ border: val })}
-										defaults={{ radius: '5px' }}
-									/>
-									<MultiShadowControl
-										className="mt20"
-										value={shadow}
-										onChange={(val) => setAttributes({ shadow: val })}
-										produce={produce}
-									/>
+									/> 
 									<ToggleControl
 										label={__("Show Full Screen", "iframe")}
 										checked={isFullScreen}

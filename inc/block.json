@@ -42,11 +42,11 @@
       "type": "array",
       "default": [
         {
-          "hOffset": "0px", 
+          "hOffset": "0px",
           "vOffset": "4px",
           "blur": "8px",
           "spreed": "0px",
-          "color": "#0003"
+          "color": "#3FB9C2A3"
         }
       ]
     },
