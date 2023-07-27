@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { maximizeIcon, minimizeIcon } from './utils/icons';
 
 const Iframe = ({ attributes, clientId }) => {
-    const { src, title, loading, isFullScreen } = attributes;
-    console.log(attributes.border);
+    const { src, title, loading, isFullScreen } = attributes; 
 
     const [isNowFull, setIsNowFull] = useState(false);
 
