@@ -62,9 +62,10 @@ const Settings = ({ attributes, setAttributes }) => {
 										labelPosition="left"
 										value={width}
 										onChange={(val) => setAttributes({ width: val })}
-									/> 
+									/>
 									<ToggleControl
-										label={__("Show Full Screen", "iframe")}
+										className="mt20"
+										label={__("Show / Hide Full Screen button", "iframe")}
 										checked={isFullScreen}
 										onChange={(val) => setAttributes({ isFullScreen: val })}
 									/>

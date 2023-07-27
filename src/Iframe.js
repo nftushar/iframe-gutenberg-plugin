@@ -3,6 +3,7 @@ import { maximizeIcon, minimizeIcon } from './utils/icons';
 
 const Iframe = ({ attributes, clientId }) => {
     const { src, title, loading, isFullScreen } = attributes;
+    console.log(attributes.border);
 
     const [isNowFull, setIsNowFull] = useState(false);
 

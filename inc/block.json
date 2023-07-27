@@ -35,7 +35,9 @@
     "border": {
       "type": "object",
       "default": {
-        "radius": "5px"
+        "radius": "20px",
+        "width": "16px",
+        "color": "rgba(255, 179, 179, 0.41)"
       }
     },
     "shadow": {
