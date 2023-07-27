@@ -19,6 +19,8 @@ class BDBBlockDirectory{
 	function render( $attributes ){
 		extract( $attributes );
 
+
+
         wp_enqueue_style('ifm-iframe-style');
         wp_enqueue_script( 'ifm-iframe-script', plugins_url( 'dist/script.js', __DIR__ ), [ 'react', 'react-dom' ], IFM_VERSION, true );
 

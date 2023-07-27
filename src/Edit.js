@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Settings from "./Settings";
 import { maximizeIcon, minimizeIcon } from "./utils/icons";
 import { getBorderCSS, getMultiShadowCSS } from '../../Components/utils/getCSS';
+// import Style from "./";
 
 
 const Edit = (props) => {
