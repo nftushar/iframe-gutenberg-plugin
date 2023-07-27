@@ -1,32 +1,22 @@
-// Your main code
+import { render } from 'react-dom';
+
 import "./style.scss";
-// import Style from "./Style";
-
-
-
-import { minimizeIcon, maximizeIcon } from "./utils/icons";
+import Style from "./Style";
+import Iframe from './Iframe';
 
 
 document.addEventListener("DOMContentLoaded", () => {
     const ifmEls = document.querySelectorAll(".wp-block-ifm-iframe");
     ifmEls.forEach((ifmEl) => {
+        const attributes = JSON.parse(ifmEl.dataset.attributes);
+        const { cId } = attributes;
 
-        const fullScreenBtn = ifmEl.querySelector('.fullScreenBtn');
-
-        const onFullScreen = () => {
-
-            if (document.fullscreenElement) {
-                document.exitFullscreen();
-                fullScreenBtn.innerHTML = maximizeIcon;
-            } else {
-                ifmEl.requestFullscreen();
-                fullScreenBtn.innerHTML = minimizeIcon;
-            }
-        };
-        fullScreenBtn.addEventListener('click', onFullScreen);
+        render(<>
+            <Style attributes={attributes} clientId={cId} />
+            <Iframe attributes={attributes} clientId={cId} />
+        </>, ifmEl);
 
         ifmEl?.removeAttribute("data-attributes");
     });
 });
 
- 

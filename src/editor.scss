@@ -1,6 +1,10 @@
 $primaryColor: #4527a4;
 
-// Custom
-.bdbNowEditing {
-	outline: 2px solid $primaryColor;
+.wp-block-ifm-iframe {
+	.mouse {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 5;
+	}
 }

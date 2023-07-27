@@ -8,6 +8,10 @@
   "textdomain": "iframe-7",
 
   "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
     "cId": {
       "type": "string",
       "default": ""
@@ -69,6 +73,5 @@
       }
     }
   },
-  "editorScript": "file:../dist/editor.js",
-  "script": "file:dist/script.js"
+  "editorScript": "file:../dist/editor.js"
 }

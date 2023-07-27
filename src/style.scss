@@ -6,23 +6,16 @@ html {
 }
 
 .wp-block-ifm-iframe { 
-	position: relative;
-	display: flex;
-	justify-content: center;
-	.mouse{
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		z-index: 5;
+	*{
+		box-sizing: border-box;
 	}
-	.ifmIframe {
+
+	.ifmIframe{
 		position: relative;
-		// background-color: #f0f0f0;
-		// padding: 15px;
+		overflow: hidden;
 	}
-	&:fullscreen .ifmIframemain,
 	&:fullscreen .ifmIframe {
-		height: 100%;
+		height: 100% !important;
 	}
 
 	.fullScreenBtn {
@@ -31,7 +24,7 @@ html {
 		right: 5px;
 		transform: translateX(-50%);
 		padding: 6px 6px 4px 6px;
-		background-color: #007bff;
+		background-color: #d1d4d6;
 		color: #fff;
 		border: none;
 		border-radius: 5px;
