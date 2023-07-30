@@ -6,17 +6,17 @@ import Iframe from './Iframe';
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const ifmEls = document.querySelectorAll(".wp-block-ifm-iframe");
-    ifmEls.forEach((ifmEl) => {
-        const attributes = JSON.parse(ifmEl.dataset.attributes);
+    const iframeEls = document.querySelectorAll(".wp-block-b-blocks-iframe");
+    iframeEls.forEach((iframeEl) => {
+        const attributes = JSON.parse(iframeEl.dataset.attributes);
         const { cId } = attributes;
 
         render(<>
             <Style attributes={attributes} clientId={cId} />
             <Iframe attributes={attributes} clientId={cId} />
-        </>, ifmEl);
+        </>, iframeEl);
 
-        ifmEl?.removeAttribute("data-attributes");
+        iframeEl?.removeAttribute("data-attributes");
     });
 });
 

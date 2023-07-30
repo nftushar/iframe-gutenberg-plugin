@@ -7,7 +7,7 @@ const Iframe = ({ attributes, clientId }) => {
     const [isNowFull, setIsNowFull] = useState(false);
 
     const onFullScreen = () => {
-        const element = document.querySelector(`#ifmIframe-${clientId}`);
+        const element = document.querySelector(`#bBlocksIframe-${clientId}`);
 
         if (document.fullscreenElement) {
             setIsNowFull(false);
@@ -18,7 +18,7 @@ const Iframe = ({ attributes, clientId }) => {
         }
     };
 
-    return <div className='ifmIframe'>
+    return <div className='bBlocksIframe'>
         <iframe
             title={title}
             width='100%'

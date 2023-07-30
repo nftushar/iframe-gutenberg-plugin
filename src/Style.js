@@ -5,7 +5,7 @@ const Style = ({ attributes, clientId }) => {
 
     return <style dangerouslySetInnerHTML={{
         __html: `
-        #ifmIframe-${clientId} .ifmIframe{
+        #bBlocksIframe-${clientId} .bBlocksIframe{
             width: ${width};
             height: ${height};
             ${getBorderCSS(border)}; 

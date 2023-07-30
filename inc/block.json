@@ -1,6 +1,6 @@
 {
   "apiVersion": "1",
-  "name": "ifm/iframe",
+  "name": "b-blocks/iframe",
   "title": "iframe",
   "description": "I Frame-7 Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive iframe embedding for videos, maps, and more.",
   "category": "media",
@@ -18,7 +18,7 @@
     },
     "src": {
       "type": "string",
-      "default": "https://bplugins.com/"
+      "default": ""
     },
     "title": {
       "type": "string",
@@ -35,8 +35,8 @@
     "border": {
       "type": "object",
       "default": {
-        "radius": "20px",
-        "width": "16px",
+        "radius": "0px",
+        "width": "px",
         "color": "rgba(255, 179, 179, 0.41)"
       }
     },
@@ -45,10 +45,10 @@
       "default": [
         {
           "hOffset": "0px",
-          "vOffset": "4px",
-          "blur": "8px",
+          "vOffset": "0px",
+          "blur": "0px",
           "spreed": "0px",
-          "color": "#3FB9C2A3"
+          "color": " "
         }
       ]
     },
