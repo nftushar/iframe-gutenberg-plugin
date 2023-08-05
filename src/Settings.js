@@ -1,99 +1,94 @@
 import { __ } from "@wordpress/i18n";
 import { InspectorControls } from "@wordpress/block-editor";
-import { outlineIcon, solidIcon } from './utils/icons';
+import { solidStar, outlineStar } from './utils/icons';
 // import produce from "immer";
-import { PanelBody, TabPanel, TextControl, SelectControl, } from "@wordpress/components";
+import { PanelBody, TabPanel, TextControl, SelectControl, RangeControl } from "@wordpress/components";
 
-import { BtnGroup } from "../../Components"
-import { RangeControl } from "@wordpress/components";
+import { BtnGroup, ColorControl } from "../../Components"
 
 const iconOptions = [
-	{ label: __('Outline', 'rating'), value: 'outlineIcon', icon: outlineIcon },
-	{ label: __('Solid', 'rating'), value: 'solidIcon', icon: solidIcon }
+	{ label: __('Solid', 'rating'), value: 'solid', icon: solidStar },
+	{ label: __('Outline', 'rating'), value: 'outline', icon: outlineStar }
 ];
-const alignments = [
-	{ label: __('left', 'rating'), value: 'left', icon: "" },
-	{ label: __('Option 1', 'rating'), value: 'option1', icon: "" }
+const iconAlignments = [
+	{ label: __('left', 'rating'), value: 'left', icon: 'editor-alignleft' },
+	{ label: __('center', 'rating'), value: 'center', icon: 'editor-aligncenter' },
+	{ label: __('right', 'rating'), value: 'right', icon: 'editor-alignright' }
 ];
 
 
 const Settings = ({ attributes, setAttributes }) => {
 	const { ratingScale, rating, iconStyle, prefix, alignment } = attributes;
 
-	return (
-		<>
-			<InspectorControls>
-				<TabPanel
-					className="bPlTabPanel"
-					tabs={[
-						{ name: "general", title: __("General") },
-						{ name: "style", title: __("Style") },
-					]}
-				>
-					{(tab) => (
-						<>
-							{tab.name === "general" && (
-								<PanelBody
-									className="bPlPanelBody"
-									title={__("Manage Star-rating", "Star-rating")}
-								>
-									<SelectControl
-										label="Rating Scale"
-										value={ratingScale}
-										options={[
-											{ label: '0-5', value: 5 },
-											{ label: '0-10', value: 10 },
-										]}
-										onChange={(val) => setAttributes({ ratingScale: val })}
-									/>
-									<RangeControl
-										className="mt20"
-										label={__("Rating", "Star-rating")}
-										labelPosition="left"
-										value={rating}
-										onChange={(val) => setAttributes({ rating: val })}
-									/>
-									<BtnGroup
-										className="mt20"
-										label={__("Icon Style", "Star-rating")}
-										labelPosition="left"
-										value={iconStyle}
-										onChange={val => setAttributes({ iconStyle: val })}
-										options={iconOptions}
-										isIcon={true}
-									/>
-									<BtnGroup
-										className="mt20"
-										label={__("Alignments", "Star-rating")}
-										labelPosition="left"
-										value={alignment}
-										onChange={val => setAttributes({ alignment: val })}
-										options={alignments}
-										isIcon={true}
-									/>
-									<TextControl
-										label={__("title", "Star-rating")}
-										value={prefix}
-										onChange={(val) => setAttributes({ prefix: val })}
-									/>
+	return <InspectorControls>
+		<TabPanel
+			className="bPlTabPanel"
+			tabs={[
+				{ name: "general", title: __("General") },
+				{ name: "style", title: __("Style") },
+			]}
+		>
+			{(tab) => <>
+				{tab.name === "general" && (
+					<PanelBody
+						className="bPlPanelBody"
+						title={__("Settings", "star-rating")}
+					>
+						<SelectControl
+							label="Rating Scale"
+							labelPosition="left"
+							value={ratingScale}
+							options={[
+								{ label: '0-5', value: 5 },
+								{ label: '0-10', value: 10 },
+							]}
+							onChange={(val) => setAttributes({ ratingScale: val })}
+						/>
 
-								</PanelBody>
-							)}
+						<TextControl
+							className="mt20"
+							label={__("Prefix", "star-rating")}
+							value={prefix}
+							onChange={(val) => setAttributes({ prefix: val })}
+						/>
 
-							{tab.name === "style" && (
-								<PanelBody
-									className="bPlPanelBody"
-									title={__("Manage Star-rating", "Star-rating")}
-								>
-								</PanelBody>
-							)}
-						</>
-					)}
+						<RangeControl
+							className="mt20"
+							label={__("Rating", "star-rating")}
+							labelPosition="left"
+							value={rating}
+							onChange={(val) => setAttributes({ rating: val })}
+						/>
 
-				</TabPanel>
-			</InspectorControls>
-		</>
-	);
+						<BtnGroup
+							className="mt20"
+							label={__("Icon Style", "star-rating")}
+							value={iconStyle}
+							onChange={val => setAttributes({ iconStyle: val })}
+							options={iconOptions} isIcon={true} />
+
+						<BtnGroup
+							className="mt20"
+							label={__("Alignment", "star-rating")}
+							value={alignment}
+							onChange={val => setAttributes({ alignment: val })}
+							options={iconAlignments} isIcon={true} />
+					</PanelBody>
+				)}
+
+				{tab.name === "style" && (
+					<PanelBody
+						className="bPlPanelBody"
+						title={__("Title", "star-rating")}
+					>
+
+
+
+					</PanelBody>
+				)}
+			</>}
+		</TabPanel>
+	</InspectorControls>;
 };
 
 export default Settings;

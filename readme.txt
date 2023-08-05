@@ -1,4 +1,4 @@
-=== star-rating - star-rating Block ===
+=== Star Rating ===
 Contributors: abuhayat, charlescormier
 Donate link: https://gum.co/wpdonate/
 Tags: block, star-rating, star, rating, Gutenberg block

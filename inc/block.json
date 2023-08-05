@@ -5,7 +5,7 @@
   "description": "Star Rating Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive star-rating  more.",
   "category": "media",
   "keywords": ["star-rating", "starRating", "Gutenberg"],
-  "textdomain": "rating",
+  "textdomain": "star-rating",
 
   "attributes": {
     "align": {
@@ -35,6 +35,24 @@
     "alignment": {
       "type": "string",
       "default": "center"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#7a7a7a"
+    },
+    "typography": {
+      "type": "object",
+      "default": {
+        "fontSize": "16px"
+      }
+    },
+    "textShadow": {
+      "type": "array",
+      "default": []
+    },
+    "gap": {
+      "type": "string",
+      "default": "10px"
     }
   },
   "supports": {
