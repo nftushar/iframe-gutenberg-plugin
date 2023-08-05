@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Outline, Solid } from './utils/icons';
+import { solidIcon, outlineIcon } from './utils/icons';
 
 const Rating = ({ attributes, clientId }) => {
-    const { src, title, } = attributes; 
+    const { src, title, loading, isFullScreen } = attributes;
 
     const [isNowFull, setIsNowFull] = useState(false);
 
@@ -17,6 +17,19 @@ const Rating = ({ attributes, clientId }) => {
             element.requestFullscreen();
         }
     };
- 
+
+    return <div className='bBlocksIframe'>
+        <rating
+            title={title}
+            width='100%'
+            height='100%'
+            src={src}
+            loading={loading}
+        ></rating>
+
+        {(isFullScreen && !src.includes('youtube.com/embed')) && (
+            <button onClick={onFullScreen} className="fullScreenBtn" dangerouslySetInnerHTML={{ __html: isNowFull ? outlineIcon : solidIcon }} />
+        )}
+    </div>
 }
 export default Rating;
