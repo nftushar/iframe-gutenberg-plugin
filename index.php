@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Iframe 7
- * Description: iFrame-7 Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive iframe embedding for videos, live website, and more..
+ * Plugin Name: star-rating
+ * Description: starRating Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive starRating  and more..
  * Version: 1.0.0
  * Author: bPlugins LLC
  * Author URI: http://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain: iframe
+ * Text Domain: starRating
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) { exit; }

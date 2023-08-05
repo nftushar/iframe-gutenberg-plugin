@@ -1,14 +1,23 @@
 import { __ } from "@wordpress/i18n";
 import { InspectorControls } from "@wordpress/block-editor";
 import produce from "immer";
-import {
-	PanelBody, TabPanel, TextControl, ToggleControl, SelectControl, __experimentalUnitControl as UnitControl,
-} from "@wordpress/components";
-import { BorderControl, MultiShadowControl } from "../../Components"
+import { PanelBody, TabPanel, TextControl, SelectControl,  } from "@wordpress/components";
+
+import { BtnGroup } from "../../Components"
+import { RangeControl } from "@wordpress/components";
+
+const iconOptions = [
+	{ label: __('Solid', 'rating'), value: 'solid', icon:"" },
+	{ label: __('Outline', 'rating'), value: 'outline', icon:"" }
+];
+const alignments = [
+	{ label: __('left', 'rating'), value: 'left', icon:"" },
+	{ label: __('Option 1', 'rating'), value: 'option1', icon:"" }
+];
 
 
 const Settings = ({ attributes, setAttributes }) => {
-	const { src, title, height, width, loading, border, shadow, isFullScreen } = attributes;
+	const { ratingScale, rating, iconStyle, prefix, alignment } = attributes;
 
 	return (
 		<>
@@ -25,70 +34,56 @@ const Settings = ({ attributes, setAttributes }) => {
 							{tab.name === "general" && (
 								<PanelBody
 									className="bPlPanelBody"
-									title={__("Manage Iframe", "iframe")}
+									title={__("Manage Star-rating", "Star-rating")}
 								>
-									<TextControl
-										label={__("Source", "iframe")}
-										value={src}
-										onChange={(val) => setAttributes({ src: val })}
+									<SelectControl
+										label="Rating Scale"
+										value={ratingScale}
+										options={[
+											{ label: '0-5', value: 5 },
+											{ label: '0-10', value: 10 },
+										]}
+										onChange={(val) => setAttributes({ ratingScale: val })}
 									/>
+									<RangeControl
+										className="mt20"
+										label={__("Rating", "Star-rating")}
+										labelPosition="left"
+										value={rating}
+										onChange={(val) => setAttributes({ rating: val })}
+									/>
+									<BtnGroup
+										className="mt20"
+										label={__("Icon Style", "Star-rating")}
+										labelPosition="left"
+										value={iconStyle}
+										onChange={val => setAttributes({ iconStyle: val })}
+										options={iconOptions} 
+										isIcon={true}
+										/>
+										<BtnGroup
+										className="mt20"
+										label={__("Alignments", "Star-rating")}
+										labelPosition="left"
+										value={alignment}
+										onChange={val => setAttributes({ alignment: val })}
+										options={alignments} 
+										isIcon={true}
+										/>
 									<TextControl
-										label={__("title", "iframe")}
-										value={title}
-										onChange={(val) => setAttributes({ title: val })}
+										label={__("title", "Star-rating")}
+										value={prefix}
+										onChange={(val) => setAttributes({ prefix: val })}
 									/>
 
-									{/* ... other controls ... */}
-									<SelectControl
-										label="Loading Behavior"
-										value={loading}
-										options={[
-											{ label: 'Auto', value: 'auto' },
-											{ label: 'Lazy', value: 'lazy' },
-											{ label: 'Eager', value: 'eager' },
-										]}
-										onChange={(val) => setAttributes({ loading: val })}
-									/>
-									<UnitControl
-										className="mt20"
-										label={__("Height", "iframe")}
-										labelPosition="left"
-										value={height}
-										onChange={(val) => setAttributes({ height: val })}
-									/>
-									<UnitControl
-										className="mt20"
-										label={__("Width", "iframe")}
-										labelPosition="left"
-										value={width}
-										onChange={(val) => setAttributes({ width: val })}
-									/>
-									<ToggleControl
-										className="mt20"
-										label={__("Show / Hide Full Screen button", "iframe")}
-										checked={isFullScreen}
-										onChange={(val) => setAttributes({ isFullScreen: val })}
-									/>
 								</PanelBody>
 							)}
 
 							{tab.name === "style" && (
 								<PanelBody
 									className="bPlPanelBody"
-									title={__("Manage Iframe", "iframe")}
+									title={__("Manage Star-rating", "Star-rating")}
 								>
-									<BorderControl
-										label={__('Border:', 'iframe')}
-										value={border}
-										onChange={val => setAttributes({ border: val })}
-										defaults={{ radius: '5px' }}
-									/>
-									<MultiShadowControl
-										className="mt20"
-										value={shadow}
-										onChange={(val) => setAttributes({ shadow: val })}
-										produce={produce}
-									/>
 								</PanelBody>
 							)}
 						</>

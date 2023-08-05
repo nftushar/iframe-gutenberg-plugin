@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { maximizeIcon, minimizeIcon } from './utils/icons';
 
-const Iframe = ({ attributes, clientId }) => {
+const Rating = ({ attributes, clientId }) => {
     const { src, title, loading, isFullScreen } = attributes; 
 
     const [isNowFull, setIsNowFull] = useState(false);
@@ -19,18 +19,17 @@ const Iframe = ({ attributes, clientId }) => {
     };
 
     return <div className='bBlocksIframe'>
-        <iframe
+        <rating
             title={title}
             width='100%'
             height='100%'
             src={src}
-            loading={loading}
-            allowfullscreen={isFullScreen}
-        ></iframe>
+            loading={loading} 
+        ></rating>
 
         {(isFullScreen && !src.includes('youtube.com/embed')) && (
             <button onClick={onFullScreen} className="fullScreenBtn" dangerouslySetInnerHTML={{ __html: isNowFull ? minimizeIcon : maximizeIcon }} />
         )}
     </div>
 }
-export default Iframe;
+export default Rating;

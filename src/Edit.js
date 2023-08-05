@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import Settings from "./Settings";
-import Iframe from "./Iframe";
+import Rating from "./Rating";
 import Style from "./Style";
 
 
@@ -16,12 +16,12 @@ const Edit = (props) => {
   return <>
     <Settings attributes={attributes} setAttributes={setAttributes} />
 
-    <div className={className} id={`bBlocksIframe-${clientId}`}>
+    <div className={className} id={`bBlocks-rating-${clientId}`}>
       {!isSelected && <div className="mouse"></div>}
 
       <Style attributes={attributes} clientId={clientId} />
-      {src ? <Iframe attributes={attributes} clientId={clientId} /> : <div className="notice">
-        Please insert a source to show iframe.
+      {src ? <Rating attributes={attributes} clientId={clientId} /> : <div className="notice">
+        Please insert a source to show star-rating.
         </div>}
     </div>
   </>
