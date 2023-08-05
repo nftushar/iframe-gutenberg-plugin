@@ -1,18 +1,19 @@
 import { __ } from "@wordpress/i18n";
 import { InspectorControls } from "@wordpress/block-editor";
+import { outlineIcon, solidIcon } from './utils/icons';
 import produce from "immer";
-import { PanelBody, TabPanel, TextControl, SelectControl,  } from "@wordpress/components";
+import { PanelBody, TabPanel, TextControl, SelectControl, } from "@wordpress/components";
 
 import { BtnGroup } from "../../Components"
 import { RangeControl } from "@wordpress/components";
 
 const iconOptions = [
-	{ label: __('Solid', 'rating'), value: 'solid', icon:"" },
-	{ label: __('Outline', 'rating'), value: 'outline', icon:"" }
+	{ label: __('Outline', 'rating'), value: 'outlineIcon', icon: outlineIcon },
+	{ label: __('Solid', 'rating'), value: 'solidIcon', icon: solidIcon }
 ];
 const alignments = [
-	{ label: __('left', 'rating'), value: 'left', icon:"" },
-	{ label: __('Option 1', 'rating'), value: 'option1', icon:"" }
+	{ label: __('left', 'rating'), value: 'left', icon: "" },
+	{ label: __('Option 1', 'rating'), value: 'option1', icon: "" }
 ];
 
 
@@ -58,18 +59,18 @@ const Settings = ({ attributes, setAttributes }) => {
 										labelPosition="left"
 										value={iconStyle}
 										onChange={val => setAttributes({ iconStyle: val })}
-										options={iconOptions} 
+										options={iconOptions}
 										isIcon={true}
-										/>
-										<BtnGroup
+									/>
+									<BtnGroup
 										className="mt20"
 										label={__("Alignments", "Star-rating")}
 										labelPosition="left"
 										value={alignment}
 										onChange={val => setAttributes({ alignment: val })}
-										options={alignments} 
+										options={alignments}
 										isIcon={true}
-										/>
+									/>
 									<TextControl
 										label={__("title", "Star-rating")}
 										value={prefix}
