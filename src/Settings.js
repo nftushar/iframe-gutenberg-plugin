@@ -32,7 +32,7 @@ const Settings = ({ attributes, setAttributes }) => {
 				{tab.name === "general" && (
 					<PanelBody
 						className="bPlPanelBody"
-						title={__("Settings", "star-rating")}
+						title={__("Settings", "map-block")}
 					>
 						<SelectControl
 							label="Rating Scale"
@@ -47,14 +47,14 @@ const Settings = ({ attributes, setAttributes }) => {
 
 						<TextControl
 							className="mt20"
-							label={__("Prefix", "star-rating")}
+							label={__("Prefix", "map-block")}
 							value={prefix}
 							onChange={(val) => setAttributes({ prefix: val })}
 						/>
 
 						<RangeControl
 							className="mt20"
-							label={__("Rating", "star-rating")}
+							label={__("Rating", "map-block")}
 							labelPosition="left"
 							value={rating}
 							onChange={(val) => setAttributes({ rating: val })}
@@ -62,14 +62,14 @@ const Settings = ({ attributes, setAttributes }) => {
 
 						<BtnGroup
 							className="mt20"
-							label={__("Icon Style", "star-rating")}
+							label={__("Icon Style", "map-block")}
 							value={iconStyle}
 							onChange={val => setAttributes({ iconStyle: val })}
 							options={iconOptions} isIcon={true} />
 
 						<BtnGroup
 							className="mt20"
-							label={__("Alignment", "star-rating")}
+							label={__("Alignment", "map-block")}
 							value={alignment}
 							onChange={val => setAttributes({ alignment: val })}
 							options={iconAlignments} isIcon={true} />
@@ -79,7 +79,7 @@ const Settings = ({ attributes, setAttributes }) => {
 				{tab.name === "style" && (
 					<PanelBody
 						className="bPlPanelBody"
-						title={__("Title", "star-rating")}
+						title={__("Title", "map-block")}
 					>
 
 

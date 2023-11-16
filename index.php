@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Star Rating
- * Description: starRating Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive starRating  and more..
+ * Plugin Name: Map Block
+ * Description: map-block Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive map-block  and more..
  * Version: 1.0.0
  * Author: bPlugins LLC
  * Author URI: http://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain: star-rating
+ * Text Domain: map-block
  */
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) { exit; }

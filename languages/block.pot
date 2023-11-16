@@ -2,8 +2,8 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: star-rating 7 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/star-rating-7\n"
+"Project-Id-Version: map-block 7 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/map-block-7\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,14 +12,14 @@ msgstr ""
 "POT-Creation-Date: 2023-07-30T05:40:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
-"X-Domain: star-rating\n"
+"X-Domain: map-block\n"
 
 #. Plugin Name of the plugin
-msgid "star-rating"
+msgid "map-block"
 msgstr ""
 
 #. Description of the plugin
-msgid "star-rating-7 Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive star-rating embedding for videos, live website, and more.."
+msgid "map-block-7 Gutenberg plugin: Streamline Gutenberg editing with easy-to-use, responsive map-block embedding for videos, live website, and more.."
 msgstr ""
 
 #. Author of the plugin
@@ -33,7 +33,7 @@ msgstr ""
 #: dist/editor.js:1
 #: dist/editor.js:851
 #: dist/editor.js:901
-msgid "Manage star-rating"
+msgid "Manage map-block"
 msgstr ""
 
 #: dist/editor.js:1

@@ -1,15 +1,15 @@
 import { useState } from 'react';
 // import { solidIcon, outlineIcon } from './utils/icons';
 
-const Rating = ({ attributes, clientId }) => {
+const Map = ({ attributes, clientId }) => {
     const { src, title, loading } = attributes;
 
     const [isNowFull, setIsNowFull] = useState(false);
 
  
 
-    return <div className='bBlocksIframe'>
-        <rating
+    return <div className='bBlocksMap'>
+        <map
             title={title}
             width='100%'
             height='100%'
@@ -19,4 +19,4 @@ const Rating = ({ attributes, clientId }) => {
  
     </div>
 }
-export default Rating;
+export default Map;
